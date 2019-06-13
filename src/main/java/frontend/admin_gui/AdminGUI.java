@@ -10,9 +10,15 @@ import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.layout.VBox;
 
 public class AdminGUI extends Application {
+   // private TableView table = new TableView();
+
     public void start(Stage stage) {
+        TableView table = new TableView();
         GridPane gridPane = new GridPane();
         Scene scene = new Scene(gridPane);
 
@@ -50,6 +56,20 @@ public class AdminGUI extends Application {
         adminCheck.setToggleGroup(groupUloga);
 
 
+        table.setEditable(true);
+        TableColumn imeCol = new TableColumn("Ime");
+        TableColumn prezCol = new TableColumn("Prezime");
+        TableColumn userCol = new TableColumn("Username");
+        TableColumn statusCol = new TableColumn("Status");
+        TableColumn rezervacijeCol = new TableColumn("Br rezervacija");
+
+        /*imeCol.prefWidthProperty().bind(table.widthProperty().multiply(0.2));
+        prezCol.prefWidthProperty().bind(table.widthProperty().multiply(0.2));
+        userCol.prefWidthProperty().bind(table.widthProperty().multiply(0.2));
+        statusCol.prefWidthProperty().bind(table.widthProperty().multiply(0.2));
+        rezervacijeCol.prefWidthProperty().bind(table.widthProperty().multiply(0.2));*/
+
+        table.getColumns().addAll(imeCol, prezCol, userCol, statusCol, rezervacijeCol);
 
         Button buttonIzmene = new Button("Sacuvaj izmene");
 
@@ -86,7 +106,9 @@ public class AdminGUI extends Application {
         gridPane.add(userCheck, 1, 5);
         gridPane.add(adminCheck, 2, 5);
 
-        gridPane.add(buttonIzmene, 0, 6);
+        gridPane.add(table, 0, 6);
+
+        gridPane.add(buttonIzmene, 0, 8);
 
 
         imeLabel.setStyle("-fx-font: normal bold 15px 'serif' ");

@@ -12,8 +12,21 @@ import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.client.RestTemplate;
+
+import javax.swing.*;
 
 public class UserGUI extends Application {
+    /*RestTemplate restTemplate = new RestTemplate();
+    String fooResourceUrl = "http://localhost:8081/service/user";
+    ResponseEntity<String> response = restTemplate.getForEntity(fooResourceUrl + "/1", String.class);*/
+    //assertThat(response.getStatusCode(), equalTo(HttpStatus.OK));
+
     public void start(Stage stage) {
         GridPane gridPane = new GridPane();
         Scene scene = new Scene(gridPane);
