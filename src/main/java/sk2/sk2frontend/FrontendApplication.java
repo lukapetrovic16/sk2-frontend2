@@ -9,10 +9,10 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableEurekaClient
 @ComponentScan(basePackages = "reserve", lazyInit = true)
-public class Sk2FrontendApplication {
+public class FrontendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Sk2FrontendApplication.class, args);
+		SpringApplication.run(FrontendApplication.class, args);
 	}
 
 }
