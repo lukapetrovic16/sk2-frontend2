@@ -1,4 +1,4 @@
-package sk2.sk2frontend.user_gui;
+package frontend.user_gui;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;

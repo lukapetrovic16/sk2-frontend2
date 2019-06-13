@@ -1,4 +1,4 @@
-package sk2.sk2frontend.register;
+package frontend.register;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;

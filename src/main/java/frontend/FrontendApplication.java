@@ -1,4 +1,4 @@
-package sk2.sk2frontend;
+package frontend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableEurekaClient
-@ComponentScan(basePackages = "reserve", lazyInit = true)
+@ComponentScan(basePackages = "frontend", lazyInit = true)
 public class FrontendApplication {
 
 	public static void main(String[] args) {
