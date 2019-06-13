@@ -66,9 +66,12 @@ public class UserGUI extends Application {
         );
         ListView<String> dateBanList = new ListView<String>(banDates);
 
+        Text brRezervacija = new Text("Broj rezervacija: ");
+        Label brRezLbl = new Label("Br rezervacija iz baze");
+
         Button buttonIzmene = new Button("Sacuvaj izmene");
 
-        gridPane.setMinSize(600, 600);
+        gridPane.setMinSize(600, 650);
 
         gridPane.setPadding(new Insets(10, 10, 10, 10));
 
@@ -108,7 +111,10 @@ public class UserGUI extends Application {
         gridPane.add(adminBanList, 1, 7);
         gridPane.add(dateBanList, 2, 7);
 
-        gridPane.add(buttonIzmene, 0, 8);
+        gridPane.add(brRezervacija, 0, 8);
+        gridPane.add(brRezLbl, 1, 8);
+
+        gridPane.add(buttonIzmene, 0, 9);
 
 
         imeLabel.setStyle("-fx-font: normal bold 15px 'serif' ");
@@ -134,6 +140,9 @@ public class UserGUI extends Application {
         uloga.setStyle("-fx-font: normal bold 15px 'serif' ");
         ban.setStyle("-fx-font: normal bold 15px 'serif'");
         istorijaBan.setStyle("-fx-font: normal bold 15px 'serif' ");
+
+        brRezervacija.setStyle("-fx-font: normal bold 15px 'serif' ");
+        brRezLbl.setStyle("-fx-font: normal bold 15px 'serif' ");
 
         gridPane.setStyle("-fx-background-color: BEIGE;");
 
