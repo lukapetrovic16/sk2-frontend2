@@ -83,6 +83,7 @@ public class UserGUI extends Application {
         Label brRezLbl = new Label("Br rezervacija iz baze");
 
         Button buttonIzmene = new Button("Sacuvaj izmene");
+        Button buttonZakazi = new Button("Zakazi termin");
 
         gridPane.setMinSize(600, 650);
 
@@ -128,6 +129,7 @@ public class UserGUI extends Application {
         gridPane.add(brRezLbl, 1, 8);
 
         gridPane.add(buttonIzmene, 0, 9);
+        gridPane.add(buttonZakazi, 1, 9);
 
 
         imeLabel.setStyle("-fx-font: normal bold 15px 'serif' ");
